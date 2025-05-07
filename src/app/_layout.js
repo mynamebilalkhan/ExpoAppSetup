@@ -1,9 +1,13 @@
 import { Stack } from "expo-router";
+import { Provider } from "react-redux";
+import store from "../store/store";
 import "../globals.css";
 
 const RootLayout = () => {
      return (
-          <Stack />
+          <Provider store={store}>
+               <Stack />
+          </Provider>
      );
 }
 
